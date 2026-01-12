@@ -25,9 +25,9 @@ public class Electronica extends Producto{
 	
 	public double calcularPrecio (int cant){
 		
-		double precio;
-		precio= super.calcularPrecio(cant)+impuestoExtra;
-		return precio;
+		return super.calcularPrecio(cant)+impuestoExtra;
+		
+		
 	}
 
 

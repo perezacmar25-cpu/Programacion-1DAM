@@ -32,15 +32,15 @@ public class LineaDeVenta {
 	}
 	
 		
-	public void agregarProducto(Producto p, int cont) {
+
+	
+	public double calcularSubtotal() {
 		
-		
+		return cant*p.calcularPrecio(cant);
 		
 		
 	}
-	
-	
-	
+
 	
 	
 	

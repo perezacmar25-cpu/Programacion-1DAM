@@ -26,9 +26,13 @@ public abstract class  Venta {
 		return "Venta [lista=" + Arrays.toString(lista) + "]";
 	}
 	
-	
-	
+	public double calcularUna(LineaDeVenta lv) {
 		
+		return lv.calcularSubtotal();
+		
+	}
+	
+		public double calcular
 		
 		
 		

@@ -16,7 +16,7 @@ public class Principal {
 		
 	
 		
-	
+		System.out.println(p2.calcularPrecio(2));
 		
 		
 		
