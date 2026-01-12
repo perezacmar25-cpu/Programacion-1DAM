@@ -39,7 +39,10 @@ public class Principal {
 					case 1:
 							System.out.println("¿Cuál es el tope de ventas?");
 							ventas=Leer.datoInt();
-							if()
+							Vendedor v1= (Vendedor) e1;
+							v1.felicitarVendedor(ventas);
+							break;
+							
 							
 							
 				

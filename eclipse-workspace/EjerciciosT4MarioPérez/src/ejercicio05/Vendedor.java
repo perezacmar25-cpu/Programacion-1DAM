@@ -39,6 +39,15 @@ public class Vendedor extends Empleado{
 		
 	}
 	
+	public void felicitarVendedor(int ventas) {
+		
+		if(ventas<cantidadVentas) {
+			
+			System.out.println("Felicidades");
+		}
+		
+	}
+	
 	
 	
 	
