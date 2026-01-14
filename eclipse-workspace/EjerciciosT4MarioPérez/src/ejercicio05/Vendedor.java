@@ -44,8 +44,9 @@ public class Vendedor extends Empleado{
 		if(ventas<cantidadVentas) {
 			
 			System.out.println("Felicidades");
+		}else {
+			System.out.println("Vaya tonto");
 		}
-		
 	}
 	
 	

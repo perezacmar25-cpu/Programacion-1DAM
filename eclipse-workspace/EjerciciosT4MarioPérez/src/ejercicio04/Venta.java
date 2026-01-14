@@ -33,6 +33,7 @@ public abstract class  Venta {
 	}
 	
 		
+	
 		
 		
 		
@@ -50,5 +51,7 @@ public abstract class  Venta {
 	
 	
 	
+	
+
 
 }

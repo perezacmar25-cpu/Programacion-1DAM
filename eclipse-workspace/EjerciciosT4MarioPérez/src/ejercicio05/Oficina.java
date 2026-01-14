@@ -54,7 +54,43 @@ public class Oficina {
 		System.out.println("Me alegro tela");
 	}
 	
+	public Empleado findById(int id) {
+		
+		for (int i = 0; i < lista.length; i++) {
+			
+			if(id==lista[i].getId()) {
+				
+				return lista[i];
+				
+			}
+				
+			
+		}
+		return null;
+		
+		
+		
+	}
 	
+	public Empleado cambiarNombre(int id,String nuevoNombre) {
+		
+		for(int i = 0; i<lista.length; i++) {
+			
+			
+			if(id==lista[i].getId()) {
+				lista[i].setNombre(nuevoNombre);
+				return lista[i];
+				
+			}
+			
+			
+			
+		}
+		return null;
+		
+		
+		
+	}
 	
 	
 	
