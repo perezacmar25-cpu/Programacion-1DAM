@@ -9,7 +9,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 
 		
-	Set <String> conjunto1 = new HashSet<String>();
+	Set <String> conjunto1 = new HashSet<>();
 	
 	conjunto1.add("hola");
 
@@ -18,7 +18,7 @@ public class Principal {
 	System.out.println(conjunto1);
 	
 	
-	Set <Alumno> listado = new HashSet<Alumno>();
+	Set <Alumno> listado = new HashSet<>();
 	
 	listado.add(new Alumno("101001010","hschdshsdsdh",10.0));
 	

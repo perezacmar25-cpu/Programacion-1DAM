@@ -36,10 +36,7 @@ public class Principal {
 			System.out.println("Las mostramos:");
 			g1.mostrarNotas();
 			
-			System.out.println("Borramos la nota que está en la posición 1:");
-			g1.delete(1);
-			
-			
+			System.out.println("Borramos la nota con id 2:");
 			
 			g1.mostrarNotas();
 			
@@ -51,6 +48,9 @@ public class Principal {
 			System.out.println("Y la volvemos a mostrar modificada:");
 			g1.mostrarNotas();
 		
+			
+			
+			g1.comprobarIgualTitulo();
 
 	
 		

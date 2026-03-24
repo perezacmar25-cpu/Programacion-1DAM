@@ -5,7 +5,8 @@ import java.util.List;
 
 public class GestionNotas {
 	
-	List <Nota> listaNotas = new ArrayList<Nota>();
+	/*private List<Nota> listaNotas; Así no está instanciada la lista*/
+	private  List <Nota> listaNotas;
 
 	public GestionNotas(List<Nota> listaNotas) {
 		super();
@@ -26,17 +27,20 @@ public class GestionNotas {
 	public String toString() {
 		return "GestionNotas [listaNotas=" + listaNotas + "]";
 	}
+	
+	
+	
 
-	public int findById(int id) {
+	public Nota findById(int id) {
 		
 		for(Nota nota : listaNotas) {
 			
 			if(nota.getId()==id) {
-				return 1;
+				return nota;
 			}
 		}
 		
-		return -1;
+		return null;
 		
 		
 	}
@@ -48,13 +52,13 @@ public class GestionNotas {
 		
 	}
 	
-	public void delete(int index) {
+	public void delete(int id) {
 		
-		listaNotas.remove(index-1);
-	   
+		Nota n = findById(id);
+			if(n!=null) {
+				listaNotas.remove(n);
+			}
 		
-	  
-	    
 	   
 	     
 	}
@@ -68,13 +72,13 @@ public class GestionNotas {
 	
 	public void modificar(String texto, int id) {
 		
-		for(Nota nota : listaNotas) {
+		Nota n = findById(id);
 			
-			if(nota.getId()==id) {
+			if(n!=null) {
 				
-				nota.setTexto(texto);
+				n.setTexto(texto);
 			}
-		}
+		
 		
 		
 	}
@@ -83,7 +87,25 @@ public class GestionNotas {
 	public void mostrarNotas() {
 		
 		System.out.println(listaNotas);
+		
 		}
+	
+	public boolean comprobarIgualTitulo() {
+		
+		for(int i = 0; i<listaNotas.size() && listaNotas !=null ; i++) {
+			
+			if(listaNotas.get(i).getTexto().equals(listaNotas.get(i-1).getTexto())) {
+				
+				return true;
+			}
+			
+			
+		}
+		
+		
+		return false;
+		
+	}
 	
 	
 	

@@ -1,6 +1,6 @@
 package ejercicio01;
 
-public class Nota {
+public class Nota implements Comparable<Nota>{
 	
 	private String texto;
 	
@@ -42,6 +42,27 @@ public class Nota {
 	@Override
 	public String toString() {
 		return "Nota [texto=" + texto + ", fecha=" + fecha + ", id=" + id + "]";
+	}
+	
+	
+
+	@Override
+	public int compareTo(Nota n) {
+		
+		
+		if(this.texto.equals(n.texto)) {
+			
+			return 0;
+			
+		}else {
+			
+			
+		}
+		
+		
+		
+		
+		return 0;
 	}
 	
 	
