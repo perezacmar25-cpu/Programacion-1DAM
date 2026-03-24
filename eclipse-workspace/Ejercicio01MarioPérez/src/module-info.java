@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module Ejercicio01MarioPérez {
-}
