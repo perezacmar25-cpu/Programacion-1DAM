@@ -76,9 +76,23 @@ public class Diccionario {
 		
 	}
 	
-	public void comparar(List<Palabra> lista) {
+	public void ordenar(List<Palabra> lista) {
 		
 		Collections.sort(lista);
+		
+	}
+	
+	public void delete(int id) {
+		
+		for(Palabra p : listado) {
+			
+			if(p.getId() == id) {
+				
+				listado.remove(p);
+			}
+			
+		}
+		
 		
 	}
 

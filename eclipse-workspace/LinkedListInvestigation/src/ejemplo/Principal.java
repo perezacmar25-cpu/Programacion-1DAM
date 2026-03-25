@@ -1,4 +1,5 @@
 package ejemplo;
+import utilidades.Leer;
 
 import java.util.LinkedList;
 
@@ -6,6 +7,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		int op;
 
 		
 		LinkedList<Cancion> lista = new LinkedList<>();	
@@ -17,36 +20,23 @@ public class Principal {
 		
 		PlayList pl1 = new PlayList(lista);
 		
-		pl1.agregarCancion(c1);
-		pl1.agregarCancion(c2);
-		pl1.agregarCancion(c3);
+		System.out.println("Elige una opción");
+		op=Leer.datoInt();
+		switch(op) {
+		
+		//Case 1: método que añada a la cola
+		//Case 2: mñetodo que borre de la cola
+		//Case 3: método que te devuelva la canción que quieras por el nombre
+		//Case 4: método que muestre todas las canciones que hay en la cola
+		//Case 5: método que avance la cola, que borre la primera canción que está en la cola para que suene.
 		
 		
-		System.out.println(lista);
 		
 		
-		// eliminamos la primera canción de la lista porque es la que está sonando, entonces ya no está en la cola.
-		
-		Cancion sonando = lista.removeFirst();
-		
-		System.out.println("Sonando: " +sonando);
+		}
 		
 		
-		// ahora que hemos eliminado la primera canción de la lista que es la que está sonando ahora mismo, la canción que antes era la segunda en la cola, 
-		// ahora es la primera, la canción que se reproducirá a continuación.
-		
-		//Vamos pasando la cola de canciones
-		System.out.println("Siguiente canción: " +lista.getFirst());
-		sonando = lista.removeFirst();
-		System.out.println("Sonando: " +sonando);
-		System.out.println("Siguiente canción: "+lista.getFirst());
-		sonando = lista.removeFirst();
-		System.out.println("Sonando: "+sonando);
-		//ya no quedan más canciones en la cola, por lo que ya no sale nada más.
-		System.out.println("Siguiente canción : "+lista.getFirst());
-		
-		
-	
-	}
 
+}
+	
 }
