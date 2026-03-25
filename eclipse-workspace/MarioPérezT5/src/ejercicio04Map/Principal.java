@@ -13,9 +13,11 @@ public class Principal {
 		
 		Contacto c1 = new Contacto("611199175","Mario");
 		
-		listado.put(c1, c1.getTelefono());
+		
 		
 		CrudAgenda ca1 = new CrudAgenda(listado);
+		
+		ca1.agregarContacto(c1);
 		
 		ca1.mostrar();
 		

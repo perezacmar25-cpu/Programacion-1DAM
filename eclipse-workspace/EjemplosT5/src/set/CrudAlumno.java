@@ -46,17 +46,6 @@ public class CrudAlumno {
 	
 																																										
 	
-	public double calcularMedia() {
-		
-		
-		Iterator <Alumno> it = conjunto1.iterator();
-		
-		while(it.hasNext()) {
-
-			
-		
-		}
-	}
 	
 	
 																																																				

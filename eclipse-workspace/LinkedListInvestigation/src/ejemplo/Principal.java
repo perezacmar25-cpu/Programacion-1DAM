@@ -13,13 +13,13 @@ public class Principal {
 		Cancion c1 = new Cancion("ASÚMELO",3.00,"Astra");
 		Cancion c2 = new Cancion("Chansey",2.45,"Astra");
 		Cancion c3 = new Cancion("Ángel guapo",3.15,"Mario");
-		lista.add(c1);
-		lista.add(c2);
-		lista.add(c3);
+		
 		
 		PlayList pl1 = new PlayList(lista);
 		
-		
+		pl1.agregarCancion(c1);
+		pl1.agregarCancion(c2);
+		pl1.agregarCancion(c3);
 		
 		
 		System.out.println(lista);
