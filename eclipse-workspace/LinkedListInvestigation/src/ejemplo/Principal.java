@@ -8,7 +8,8 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int op;
+		int op, addSong;
+		String borrarSong, findSong;
 
 		
 		LinkedList<Cancion> lista = new LinkedList<>();	
@@ -19,21 +20,75 @@ public class Principal {
 		
 		
 		PlayList pl1 = new PlayList(lista);
+		do {
 		
 		System.out.println("Elige una opción");
+		System.out.println("\n╔══════════════════════════════════════╗");
+        System.out.println("║     SISTEMA DE GESTIÓN DE CANCIONES  ║");
+        System.out.println("╠══════════════════════════════════════╣");
+        System.out.println("║  1. Agregar una canción               ║");
+        System.out.println("║  2. Borrar una canción                ║");
+        System.out.println("║  3. Buscar canción por nombre         ║");
+        System.out.println("║  4. Mostrar la cola                   ║");
+        System.out.println("║  5. Borrar la primera canción         ║");
+        System.out.println("║  6. Ver la siguiente canción          ║");
+        System.out.println("║  0. Salir                             ║");
+        System.out.println("╚══════════════════════════════════════╝");
 		op=Leer.datoInt();
 		switch(op) {
 		
-		//Case 1: método que añada a la cola
-		//Case 2: mñetodo que borre de la cola
-		//Case 3: método que te devuelva la canción que quieras por el nombre
-		//Case 4: método que muestre todas las canciones que hay en la cola
-		//Case 5: método que avance la cola, que borre la primera canción que está en la cola para que suene.
+		case 1:
+				System.out.println("Pulsa 1 si quieres agregar ASÚMELO");
+				System.out.println("Pulsa 2 si quieres agregar Chansey");
+				System.out.println("Pulsa 3 si quieres agregar Ángel guapo");
+				addSong=Leer.datoInt();
+				switch(addSong) {
+				
+				case 1:
+						pl1.agregarCancion(c1);
+						break;
+					
+				case 2:
+						pl1.agregarCancion(c2);
+						break;
+						
+				case 3:
+						pl1.agregarCancion(c3);
+						break;
+				}
+				break;
+		case 2 :
+				System.out.println("Di el nombre de la canción que quieras borrar");
+				borrarSong = Leer.dato();
+				pl1.borrarCancion(borrarSong);
+				break;
+				
+				
+		case 3:
+				System.out.println("¿Qué canción quieres?");
+				findSong = Leer.dato();
+				pl1.findByNombre(findSong);
+				break;
+				
+		case 4:
+				pl1.mostrarCola();
+				break;
+				
+		case 5:
+			pl1.borrarPrimera();
+			break;
+				
+			
+		case 6:
+				pl1.obtenerSiguiente();
+				break;
 		
 		
 		
 		
 		}
+		
+		}while(op!=0);
 		
 		
 

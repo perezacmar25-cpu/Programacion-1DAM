@@ -2,7 +2,7 @@ package ejerciciotipoexamen;
 
 import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
+import java.util.List; 
 
 public class Diccionario {
 
@@ -60,25 +60,22 @@ public class Diccionario {
 	}
 	
 	public void modificarSignificado(String nombre,String significado) {
-		
-		if(findByName(nombre)) {
 			
 			for(Palabra p : listado) {
-				
-				if(p.getNombre().equalsIgnoreCase(nombre)) {
+				if(findByName(nombre)) {
 					p.setSignificado(significado);
 				}
 			}
-		}
+		
 		
 		
 		
 		
 	}
 	
-	public void ordenar(List<Palabra> lista) {
+	public void ordenar() {
 		
-		Collections.sort(lista);
+		Collections.sort(listado);
 		
 	}
 	

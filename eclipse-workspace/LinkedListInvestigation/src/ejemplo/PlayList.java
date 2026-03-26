@@ -27,6 +27,19 @@ public class PlayList {
 	}
 	
 	
+	public Cancion findByNombre(String nombre) {
+		
+		for(Cancion c : lista) {
+			
+			if(c.getNombre().equalsIgnoreCase(nombre)) {
+				return c;
+			}
+		}
+		
+		return null;
+		
+	}
+	
 	
 	
 	public void agregarCancion(Cancion c) {
@@ -41,13 +54,11 @@ public class PlayList {
 	
 	public void borrarCancion(String nombre) {
 		
-		for(Cancion c : lista) {
+		Cancion c = findByNombre(nombre);
+		
+		if(c.getNombre().equalsIgnoreCase(nombre)) {
 			
-			if(c.getNombre().equalsIgnoreCase(nombre)) {
-				
-				lista.remove(c);
-			}
-			
+			lista.remove(c);
 		}
 		
 	}
@@ -56,8 +67,6 @@ public class PlayList {
 	public void mostrarCola() {
 		
 		Iterator <Cancion> it = lista.iterator();
-		
-		
 		
 		while(it.hasNext() && !lista.isEmpty()) {
 			
@@ -69,6 +78,17 @@ public class PlayList {
 		
 	}
 	
+	public void borrarPrimera() {
+		
+		lista.removeFirst();
+		
+		
+	}
+	
+	public void obtenerSiguiente() {
+		
+		System.out.println(lista.getFirst()); 
+	}
 	
 	
 	

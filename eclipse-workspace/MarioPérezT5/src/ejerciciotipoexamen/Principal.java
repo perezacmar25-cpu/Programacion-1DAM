@@ -13,7 +13,7 @@ public class Principal {
 		int op, idBorrar;
 		String palabra, significado, palabra2;
 
-		Palabra p = new Palabra(1, "Coche", "Vehículo de cuatro ruedas");
+		Palabra p = new Palabra(1, "For", "Para, preposición");
 		List<Palabra> listado = new ArrayList<>();
 
 		Diccionario d1 = new Diccionario(listado);
@@ -31,7 +31,6 @@ public class Principal {
 		case 2:
 			System.out.println("¿Qué palabra quieres?");
 			palabra = Leer.dato();
-			d1.findByName(palabra);
 			if (d1.findByName(palabra)) {
 				System.out.println(p.getSignificado());
 			} else {
@@ -54,11 +53,12 @@ public class Principal {
 			System.out.println("Di el nuevo significado");
 			significado=Leer.dato();
 			d1.modificarSignificado(palabra2, significado);
+			break;
 			
 			
 			
 		case 5:
-				d1.ordenar(listado);
+				d1.ordenar();
 				System.out.println("Lista ordenada correctamente");
 				break;
 				
