@@ -1,6 +1,6 @@
 package ejemplo;
 
-public class Cancion {
+public class Cancion implements Comparable<Cancion> {
 	
 	private String nombre;
 	private double duracion;
@@ -32,6 +32,11 @@ public class Cancion {
 	@Override
 	public String toString() {
 		return "Cancion [nombre=" + nombre + ", duracion=" + duracion + ", autor=" + autor + "]";
+	}
+	@Override
+	public int compareTo(Cancion o) {
+		
+		return this.nombre.toLowerCase().compareTo(o.getNombre());
 	}
 	
 	

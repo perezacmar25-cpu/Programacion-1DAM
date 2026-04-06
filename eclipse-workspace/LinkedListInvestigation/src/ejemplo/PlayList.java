@@ -1,7 +1,10 @@
 package ejemplo;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
+
+
 
 public class PlayList {
 	
@@ -90,6 +93,28 @@ public class PlayList {
 		System.out.println(lista.getFirst()); 
 	}
 	
+	
+	public void recorrerListaEjemplo() {
+		
+		Iterator<Cancion> it = lista.iterator();
+		
+		while (it.hasNext()) {
+			
+			Cancion c = it.next();
+			System.out.println(c);
+			
+			
+		}
+		
+		
+	}
+	
+	public void ordenar() {
+		
+		Collections.sort(lista);
+		
+		
+	}
 	
 	
 	
